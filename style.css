@@ -358,4 +358,83 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    /* 1. Header: Biar menu nggak terlalu rapat */
+    .header {
+        padding: 15px 10px;
+        flex-direction: column;
+        gap: 10px; /* Kasih jarak antara logo dan link menu */
+    }
+
+    .navbar a {
+        margin: 0 10px; /* Jarak antar menu navigasi */
+        font-size: 14px;
+    }
+
+    /* 2. Hero Section: Biar logo Arena Go Go di tengah pas */
+    .Home {
+        height: auto; /* Biar nggak maksa satu layar penuh di HP */
+        padding: 100px 20px 40px;
+        flex-direction: column; 
+    }
+
+    .Home h1 {
+        margin-top: 0;
+        font-size: 22px;
+        order: 1; /* Teks di atas */
+    }
+
+    .Home-content {
+        margin: 20px 0;
+        order: 2; /* Logo di bawah teks */
+    }
+
+    .photo-home img {
+        width: 140px;
+        margin: 10px auto;
+        display: block;
+    }
+
+    /* 3. Section Turnamen: Biar kartu nggak terlalu panjang/lebar */
+    .imgbutton {
+        height: auto;
+        padding: 40px 15px;
+    }
+
+    .title {
+        margin-top: 0;
+        font-size: 20px;
+        padding: 10px 20px;
+        width: fit-content;
+    }
+
+    .box {
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+        gap: 25px; /* Jarak antar kartu turnamen */
+    }
+
+    .card {
+        width: 90%; /* Supaya ada sisa ruang di kiri kanan */
+        height: auto;
+        min-height: 400px;
+    }
+
+    /* 4. Footer: Ikon sosmed dipermanis */
+    .sosmed {
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .sosmed a {
+        font-size: 35px;
+        margin-top: 0;
+    }
+
+    .photo-footer img {
+        margin-top: 20px;
+        width: 120px;
+    }
+}
 
