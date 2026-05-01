@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gold;
+    border-radius: 25px;
+}
+
+::-webkit-scfrollbar-track {
+    background: #ffff;
+    width: 60px;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 20px;
+    padding-top: 20px;
+    padding: 20px;
+    letter-spacing: 2px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: gold;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-left: 40px;
+    font-weight: bold;
+    transition: color 0.3s ease ease-in-out, transform 0.3s ease ease-in-out;
+}
+
+.navbar a:active {
+    border-bottom: 2px solid black;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: gold;
+    transform: scale(1.1);
+}
+
+
+.Home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 200px;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin-trim: all;
+}
+
+.Home h1 {
+    margin-top: -200px;
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.Home-content{
+    margin-top: 600px;
+    margin-right: 250px;
+    margin-left: 250px;
+}
+
+.photo-home img {
+    width: 250px;
+    height: auto;
+    justify-content: center;
+    margin-right: -550px;
+    margin-bottom: 50px;
+    margin-left: 350px;
+    border-radius: 200px;
+    border: 2px solid #AF8260;
+    box-shadow: 0 0 10px 1px #AF8260;
+    transition: transform 0.4s ease-in-out;
+}
+
+.photo-home img:hover{
+    transform: scale(1.1);
+}
+
+
+.imgbutton {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 200px;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.title {
+    color: black;
+    font-size: 30px;
+    margin-top: -400px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    padding-left: 20px  ;
+    padding: none;
+    background-image:radial-gradient( rgba(255, 217, 0, 0.89),rgb(245, 166, 63));
+    border-radius: 2rem;
+    border: 2px none;
+    border: 2px solid #AF8260;
+    box-shadow: 0 0 10px 1px #AF8260;
+
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 300px;
+    margin: 20px;
+}
+
+.card {
+    font-size: 16px;
+    color: black;
+    width: 300px;
+    margin-bottom: -px;
+    height: 300px;
+    padding: none;
+    background-color: rgb(245, 245, 124);
+    border-radius: 2rem;
+    border: 2px solid black;
+    margin-top: none;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.4s ease-in-out
+}
+
+.title h2 {
+    color: rgb(9, 9, 59);
+    padding-top: 20px;
+}
+
+.card img {
+    image-resolution: calc(100%);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
+.card:hover {
+    transform: scale(1.1)
+}
+
+footer {
+    background-color:rgb(9, 9, 59);
+}
+
+.FooterContainer {
+    width: 100%;
+    padding: 50px 20px 20px;
+}
+
+.sosmed { 
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+}
+
+.sosmed a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 100px;   
+    text-align: center;
+    transition: 0.3s ease ease-in-out;
+    margin-bottom: none;
+    font-size: 51px;
+}
+
+.sosmed a:hover {
+    color: gold;
+    transform: scale(1.3) translateY(-5px);
+    transition: 0.5s;
+}
+
+.photo-footer img {
+    width: 200px;
+    height: auto;
+    margin-top: -400px;
+    margin-bottom: 70px;
+}
+
+.footerbottom p {
+    text-align: center;
+    color: white;
+}
+
+.designer {
+    color: whitesmoke;
+}
+
+
+
