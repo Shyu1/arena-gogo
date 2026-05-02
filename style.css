@@ -279,38 +279,59 @@ footer {
         order: 2; /* Kontainer logo di bawah teks */
     }
 
-    
+    .photo-home img {
+        margin: 0 auto; /* Menghapus -550px agar logo ke tengah */
+        width: 180px; /* Ukuran pas untuk layar HP */
+        display: block;
+        position: static;
+    }
+
+    /* 3. Section Turnamen (Kartu Kuning): Memberi jarak agar tidak dempet */
     .imgbutton {
         height: auto;
-        padding: 20px 10px;
+        padding: 40px 10px;
     }
 
     .title {
-        margin-top: 0;
-        font-size: 18px;
-        text-align: left; /* Biar mirip contoh yang kamu kasih */
-        padding-left: 10px;
+        margin-top: 0; /* Menghapus -400px laptop */
+        font-size: 22px;
+        width: fit-content;
+        display: block;
+        margin: 0 auto 20px;
     }
 
     .box {
-        display: grid; /* Ganti flex jadi grid */
-        grid-template-columns: repeat(3, 1fr); /* INI KUNCINYA: Bagi jadi 3 kolom sama rata */
-        gap: 10px; /* Jarak antar kotak kecil */
-        padding: 10px;
-        justify-items: center;
+        flex-direction: column; /* Kartu berurutan ke bawah agar poster besar & jelas */
+        height: auto;
+        max-height: none;
+        gap: 30px; /* Jarak antar kartu supaya tidak bertumpuk */
+        margin-top: 20px;
     }
 
     .card {
-        width: 100%; /* Dia bakal ngikutin lebar grid (1/3 layar) */
-        height: auto; /* Biar tingginya menyesuaikan poster */
-        aspect-ratio: 3 / 4; /* Biar bentuk kotaknya konsisten tetap estetik */
-        border-radius: 10px; /* Kotak kecil biasanya sudutnya lebih halus */
-        border: 1px solid black; /* Tipiskan border biar nggak berat */
+        width: 95%; /* Poster hampir selebar layar HP */
+        max-width: 100px;
+        height: auto; /* Tinggi mengikuti isi */
+        margin: 0 auto;
     }
 
     .card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Biar gambar poster penuh di dalam kotak kecil */
+        object-fit: contain; /* Memastikan poster turnamen tidak terpotong */
+    }
+
+    /* 4. Footer: Menetralkan posisi ikon sosmed */
+    .sosmed {
+        margin-top: 30px; /* Menghapus -90px laptop */
+        gap: 20px;
+    }
+
+    .sosmed a {
+        font-size: 35px;
+        margin-top: 0;
+    }
+
+    .photo-footer img {
+        margin-top: 20px; /* Menghapus -400px laptop */
+        width: 120px;
     }
 }
