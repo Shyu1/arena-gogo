@@ -241,97 +241,76 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* 1. Header: Kita buat menumpuk supaya teks "MCGG" tidak nabrak logo */
+    /* 1. Header: Kita buat menumpuk agar teks tidak nabrak logo */
     .header {
-        position: relative; /* Melepaskan 'fixed' agar tidak menutupi konten */
+        position: relative;
         flex-direction: column;
         padding: 15px;
-        background-color: rgba(9, 9, 59, 0.95); /* Biru tua solid agar navigasi jelas */
+        background-color: rgba(9, 9, 59, 0.95);
         gap: 10px;
-    }
-
-    .navbar {
-        margin-top: 5px;
     }
 
     .navbar a {
         margin: 0 10px;
         font-size: 14px;
-        color: white; /* Ganti putih agar kontras di HP */
     }
 
-    /* 2. Section Home: Menetralkan posisi foto & teks */
+    /* 2. Section Home: Reset agar teks & logo tidak tabrakan */
     .Home {
         height: auto; 
         padding: 40px 20px;
         flex-direction: column;
-        display: flex;
     }
 
     .Home h1 {
-        margin-top: 0; /* Menghapus -200px agar teks muncul di atas */
+        margin-top: 0; /* Reset margin negatif laptop */
         font-size: 24px;
-        order: 1; /* Teks di paling atas */
-    }
-
-    .Home-content {
-        margin: 20px 0; /* Menghapus margin 250px laptop */
-        order: 2; /* Kontainer logo di bawah teks */
     }
 
     .photo-home img {
-        margin: 0 auto; /* Menghapus -550px agar logo ke tengah */
-        width: 180px; /* Ukuran pas untuk layar HP */
-        display: block;
+        margin: 20px auto; /* Reset margin negatif laptop */
+        width: 160px;
         position: static;
     }
 
-    /* 3. Section Turnamen (Kartu Kuning): Memberi jarak agar tidak dempet */
+    /* 3. BAGIAN POSTER: Tetap Horizontal & Bisa Digeser */
     .imgbutton {
         height: auto;
-        padding: 40px 10px;
+        padding: 40px 0;
+        overflow: hidden; /* Mencegah seluruh halaman goyang */
     }
 
     .title {
-        margin-top: 0; /* Menghapus -400px laptop */
+        margin-top: 0; /* Reset margin negatif laptop */
         font-size: 22px;
-        width: fit-content;
-        display: block;
-        margin: 0 auto 20px;
+        text-align: center;
     }
 
     .box {
-        flex-direction: column; /* Kartu berurutan ke bawah agar poster besar & jelas */
-        height: auto;
-        max-height: none;
-        gap: 30px; /* Jarak antar kartu supaya tidak bertumpuk */
-        margin-top: 20px;
+        display: flex;
+        flex-direction: row; /* PAKSA tetap horizontal seperti laptop */
+        justify-content: flex-start; /* Mulai dari kiri */
+        gap: 20px;
+        padding: 20px;
+        overflow-x: auto; /* INI KUNCINYA: Bisa digeser ke samping di HP */
+        -webkit-overflow-scrolling: touch; /* Biar scroll-nya halus di iPhone */
+        width: 100%;
     }
 
     .card {
-        width: 95%; /* Poster hampir selebar layar HP */
-        max-width: 350px;
-        height: auto; /* Tinggi mengikuti isi */
-        margin: 0 auto;
+        flex: 0 0 300px; /* JANGAN biarkan kartu mengecil, tetap ukuran asli 300px */
+        height: 400px; /* Tetap tinggi asli sesuai laptop */
+        margin: 0;
     }
 
     .card img {
-        object-fit: contain; /* Memastikan poster turnamen tidak terpotong */
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Tetap sama seperti versi laptopmu */
     }
 
-    /* 4. Footer: Menetralkan posisi ikon sosmed */
-    .sosmed {
-        margin-top: 30px; /* Menghapus -90px laptop */
-        gap: 20px;
-    }
-
-    .sosmed a {
-        font-size: 35px;
-        margin-top: 0;
-    }
-
-    .photo-footer img {
-        margin-top: 20px; /* Menghapus -400px laptop */
-        width: 120px;
-    }
+    /* 4. Footer Reset */
+    .sosmed { margin-top: 30px; gap: 20px; }
+    .sosmed a { font-size: 35px; margin-top: 0; }
+    .photo-footer img { margin-top: 20px; width: 120px; }
 }
