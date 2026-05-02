@@ -301,15 +301,15 @@ footer {
     }
 
     .box {
-        flex-direction: column; /* Kartu berurutan ke bawah agar poster besar & jelas */
+        flex-direction: row;/* Kartu berurutan ke bawah agar poster besar & jelas */
         height: auto;
-        max-height: none;
+        max-width: 500px;
         gap: 30px; /* Jarak antar kartu supaya tidak bertumpuk */
         margin-top: 20px;
     }
 
     .card {
-        width: 95%; /* Poster hampir selebar layar HP */
+        width: 100%; /* Poster hampir selebar layar HP */
         max-width: 100px;
         height: auto; /* Tinggi mengikuti isi */
         margin: 0 auto;
