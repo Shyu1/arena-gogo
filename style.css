@@ -301,7 +301,7 @@ footer {
     }
 
     .box {
-        flex-direction: row;/* Kartu berurutan ke bawah agar poster besar & jelas */
+        flex-direction: row-reverse;/* Kartu berurutan ke bawah agar poster besar & jelas */
         height: auto;
         max-width: 400px;
         gap: 20px; /* Jarak antar kartu supaya tidak bertumpuk */
@@ -310,19 +310,13 @@ footer {
 
     .card {
         width: 100%; /* Poster hampir selebar layar HP */
-        max-width: 200px;
+        max-width: 250px;
         height: auto; /* Tinggi mengikuti isi */
         margin: 0 auto;
     }
 
-    .card a {
-        width: 100%;
-        max-width: 200px;
-
     .card img {
         object-fit: contain; /* Memastikan poster turnamen tidak terpotong */
-        width: 100%;
-        max-width: 200px;
 
     }
 
