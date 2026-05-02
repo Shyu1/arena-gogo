@@ -315,8 +315,15 @@ footer {
         margin: 0 auto;
     }
 
+    .card a {
+        width: 100%;
+        max-width: 200px;
+
     .card img {
         object-fit: contain; /* Memastikan poster turnamen tidak terpotong */
+        width: 100%;
+        max-width: 200px;
+
     }
 
     /* 4. Footer: Menetralkan posisi ikon sosmed */
