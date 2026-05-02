@@ -241,76 +241,63 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* 1. Header: Kita buat menumpuk agar teks tidak nabrak logo */
+    /* 1. Header: Rapikan susunan agar tidak menindih konten */
     .header {
-        position: relative;
+        position: relative; /* Melepas 'fixed' agar konten bawah tidak tertutup */
         flex-direction: column;
         padding: 15px;
-        background-color: rgba(9, 9, 59, 0.95);
         gap: 10px;
     }
 
-    .navbar a {
-        margin: 0 10px;
-        font-size: 14px;
-    }
-
-    /* 2. Section Home: Reset agar teks & logo tidak tabrakan */
+    /* 2. Home Section: Reset margin negatif agar teks & logo muncul di tengah */
     .Home {
-        height: auto; 
-        padding: 40px 20px;
+        height: auto;
+        padding: 40px 10px;
         flex-direction: column;
     }
 
     .Home h1 {
-        margin-top: 0; /* Reset margin negatif laptop */
-        font-size: 24px;
+        margin-top: 0; /* Menetralkan margin -200px laptop */
+        font-size: 22px;
     }
 
     .photo-home img {
-        margin: 20px auto; /* Reset margin negatif laptop */
+        margin: 20px auto; /* Menetralkan margin -550px laptop */
         width: 160px;
         position: static;
     }
 
-    /* 3. BAGIAN POSTER: Tetap Horizontal & Bisa Digeser */
+    /* 3. BAGIAN POSTER: Tetap Horizontal & Ukuran Asli (Bisa Digeser) */
     .imgbutton {
         height: auto;
         padding: 40px 0;
-        overflow: hidden; /* Mencegah seluruh halaman goyang */
+        overflow-x: hidden; /* Mencegah seluruh badan web goyang */
     }
 
     .title {
-        margin-top: 0; /* Reset margin negatif laptop */
-        font-size: 22px;
+        margin-top: 0; /* Menetralkan margin -400px laptop */
+        font-size: 20px;
         text-align: center;
     }
 
     .box {
         display: flex;
-        flex-direction: row; /* PAKSA tetap horizontal seperti laptop */
-        justify-content: flex-start; /* Mulai dari kiri */
+        flex-direction: row; /* Paksa tetap horizontal seperti laptop */
+        justify-content: flex-start;
         gap: 20px;
         padding: 20px;
-        overflow-x: auto; /* INI KUNCINYA: Bisa digeser ke samping di HP */
-        -webkit-overflow-scrolling: touch; /* Biar scroll-nya halus di iPhone */
+        overflow-x: auto; /* INI KUNCINYA: Biar bisa digeser ke samping */
         width: 100%;
+        -webkit-overflow-scrolling: touch; /* Biar scroll di HP mulus */
     }
 
     .card {
-        flex: 0 0 300px; /* JANGAN biarkan kartu mengecil, tetap ukuran asli 300px */
-        height: 400px; /* Tetap tinggi asli sesuai laptop */
+        flex: 0 0 300px; /* PAKSA ukuran tetap 300px (tidak akan mengecil/ketarik) */
+        height: 400px; /* Tetap tinggi asli sesuai desainmu */
         margin: 0;
     }
 
-    .card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Tetap sama seperti versi laptopmu */
-    }
-
-    /* 4. Footer Reset */
-    .sosmed { margin-top: 30px; gap: 20px; }
-    .sosmed a { font-size: 35px; margin-top: 0; }
-    .photo-footer img { margin-top: 20px; width: 120px; }
+    /* 4. Footer Reset: Menetralkan margin negatif footer */
+    .sosmed { margin-top: 30px; }
+    .photo-footer img { margin-top: 20px; width: 100px; }
 }
