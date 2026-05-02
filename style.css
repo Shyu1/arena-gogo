@@ -345,8 +345,9 @@ footer {
         margin-top: 0;
     }
 
-    .FooterContainer {
-        height: 50%;
+  footer {
+      max-height: 400px;
+      width: 100%;
     }
 
     .photo-footer img {
