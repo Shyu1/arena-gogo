@@ -303,14 +303,14 @@ footer {
     .box {
         flex-direction: row;/* Kartu berurutan ke bawah agar poster besar & jelas */
         height: auto;
-        max-width: 500px;
-        gap: 30px; /* Jarak antar kartu supaya tidak bertumpuk */
+        max-width: 400px;
+        gap: 20px; /* Jarak antar kartu supaya tidak bertumpuk */
         margin-top: 20px;
     }
 
     .card {
         width: 100%; /* Poster hampir selebar layar HP */
-        max-width: 100px;
+        max-width: 200px;
         height: auto; /* Tinggi mengikuti isi */
         margin: 0 auto;
     }
