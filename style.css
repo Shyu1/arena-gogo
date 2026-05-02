@@ -354,4 +354,7 @@ footer {
         margin-bottom: 100px;
         width: 120px;
     }
+    .FooterBottom {
+        font-size: 16px;
+    }
 }
