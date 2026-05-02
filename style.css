@@ -307,6 +307,7 @@ footer {
         display: flex;
         flex-direction: row; /* Poster tetap ke samping */
         overflow-x: auto;    /* Bisa di-scroll */
+        overflow-y: hidden;
         width: 100%;
         gap: 15px;
         padding: 0 20px;
@@ -315,8 +316,8 @@ footer {
 
     /* Ukuran kartu agar seragam dan tidak menciut */
     .card {
-        flex: 0 0 280px; /* Lebar poster tetap 280px (tidak boleh kurang) */
-        height: 400px;   /* Tinggi seragam */
+        flex: 0 0 140px; /* Lebar poster tetap 280px (tidak boleh kurang) */
+        height: 200px;   /* Tinggi seragam */
     }
 
     .card img {
