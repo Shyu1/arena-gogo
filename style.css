@@ -241,96 +241,61 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* 1. Header & Navbar: Supaya tidak nabrak Logo */
+    /* 1. Header Tetap Rapi */
     .header {
-        position: relative; /* Jangan fixed di HP agar tidak menutupi konten bawah */
+        position: relative;
         flex-direction: column;
-        padding: 15px;
+        padding: 10px;
         background-color: rgba(9, 9, 59, 0.95);
-        gap: 10px;
-    }
-
-    .logo {
-        padding: 5px;
-        font-size: 18px;
-    }
-
-    .navbar {
-        margin-top: 5px;
     }
 
     .navbar a {
-        margin: 0 10px;
-        font-size: 14px;
+        margin: 0 5px;
+        font-size: 12px;
     }
 
-    /* 2. Section Home: Menghilangkan tabrakan margin negatif */
+    /* 2. Home Section (Tetap Vertikal agar Teks Terbaca) */
     .Home {
-        height: auto; 
-        padding: 50px 20px;
-        flex-direction: column;
-        display: flex;
-    }
-
-    .Home h1 {
-        margin-top: 0; /* Menetralisir -200px punyamu khusus di HP */
-        font-size: 24px;
-        order: 1;
-    }
-
-    .Home-content {
-        margin: 20px 0; /* Menetralisir margin samping 250px punyamu */
-        order: 2;
-    }
-
-    .photo-home img {
-        margin: 10px auto; /* Menetralisir margin -550px punyamu */
-        width: 160px;
-        display: block;
-        position: static;
-    }
-
-    /* 3. Section Turnamen (Kartu Kuning): Memberi jarak antar kartu */
-    .imgbutton {
         height: auto;
         padding: 40px 10px;
+        flex-direction: column;
     }
 
-    .title {
-        margin-top: 0; /* Menetralisir -400px punyamu */
-        font-size: 22px;
-        width: auto;
-        display: inline-block;
+    .Home h1 { margin-top: 0; font-size: 20px; }
+    .Home-content { margin: 10px 0; }
+    .photo-home img { margin: 0 auto; width: 120px; position: static; }
+
+    /* 3. BAGIAN POSTER (Tetap Horizontal/Berjejer) */
+    .imgbutton {
+        height: auto;
+        padding: 20px 5px;
+        overflow-x: hidden; /* Mencegah layar goyang ke samping */
     }
+
+    .title { margin-top: 0; font-size: 18px; }
 
     .box {
-        flex-direction: column;
-        height: auto;
-        max-height: none;
-        gap: 30px; /* Jarak antar kartu supaya tidak dempet seperti di foto */
-        margin-top: 30px;
+        display: flex;
+        flex-direction: row; /* PAKSA tetap horizontal */
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* Jarak kecil antar poster */
+        width: 100%;
     }
 
     .card {
-        width: 90%;
-        max-width: 320px;
+        width: 48%; /* Bagi dua layar (biar muat 2 poster sejajar) */
         height: auto;
-        margin: 0 auto;
+        min-height: 150px; /* Sesuaikan agar tidak terlalu gepeng */
+        margin: 0;
     }
 
-    /* 4. Footer & Sosmed */
-    .sosmed {
-        margin-top: 30px; /* Menetralisir -90px punyamu */
-        gap: 20px;
+    .card img {
+        object-fit: contain; /* Agar poster tidak terpotong */
     }
 
-    .sosmed a {
-        font-size: 35px;
-        margin-top: 0;
-    }
-
-    .photo-footer img {
-        margin-top: 20px; /* Menetralisir -400px punyamu */
-        width: 120px;
-    }
+    /* 4. Footer Reset */
+    .sosmed { margin-top: 20px; gap: 15px; }
+    .sosmed a { font-size: 30px; margin-top: 0; }
+    .photo-footer img { margin-top: 20px; width: 80px; }
 }
