@@ -27,12 +27,13 @@
 .header {
     position: fixed;
     width: 100%;
+    height: 10%;
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     z-index: 100;
-    background-color: transparent;
+    background-color: rgb(9, 9, 59);
     backdrop-filter: blur(10px);
 }
 
@@ -51,10 +52,15 @@
 }
 
 .navbar a {
-    color: gold;
+    color: rgb(9, 9, 59);
+    padding: 3px 9px;
+    background-image:radial-gradient( rgba(255, 217, 0, 0.89),rgb(245, 166, 63));
+     border: 2px solid #AF8260;
+    box-shadow: 0 0 2px 1px #AF8260;
+    border-radius: 2rem;
     text-decoration: none;
     letter-spacing: 2px;
-    font-size: 18px;
+    font-size: 24px;
     margin-left: 40px;
     font-weight: bold;
     transition: color 0.3s ease ease-in-out, transform 0.3s ease ease-in-out;
@@ -66,45 +72,40 @@
 }
 
 .navbar a:hover {
-    color: gold;
+    color: white;
     transform: scale(1.1);
 }
 
 
 .Home {
-    height: 100vh;
+    height: 125vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px 200px;
     background-image: url(bg.jpg);
     background-size: cover;
     background-position: center;
     text-align: center;
-    margin-trim: all;
 }
 
 .Home h1 {
-    margin-top: -200px;
     font-size: 32px;
     letter-spacing: 1px;
     color: white;
-    margin-bottom: 20px;
-}
-
-.Home-content{
-    margin-top: 600px;
-    margin-right: 250px;
-    margin-left: 250px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .photo-home img {
     width: 250px;
     height: auto;
     justify-content: center;
-    margin-right: -550px;
-    margin-bottom: 50px;
-    margin-left: 350px;
+    align-items: center;
+    text-align: center;
+    display: block;
+    position: static;
     border-radius: 200px;
     border: 2px solid #AF8260;
     box-shadow: 0 0 10px 1px #AF8260;
@@ -116,12 +117,12 @@
 }
 
 
-.imgbutton {
+.MCGG {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px 200px;
     background-image: url(bg.jpg);
     background-size: cover;
     background-position: center;
@@ -130,15 +131,12 @@
 
 .title {
     color: black;
-    font-size: 30px;
-    margin-top: -400px;
+    width: fit-content;
+    font-size: 26px;
     letter-spacing: 2px;
-    margin-bottom: 10px;
-    padding-left: 20px  ;
-    padding: none;
+    padding: 10px 30px;
     background-image:radial-gradient( rgba(255, 217, 0, 0.89),rgb(245, 166, 63));
     border-radius: 2rem;
-    border: 2px none;
     border: 2px solid #AF8260;
     box-shadow: 0 0 10px 1px #AF8260;
 
@@ -148,6 +146,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     max-height: 300px;
     margin: 20px;
 }
@@ -156,22 +155,20 @@
     font-size: 16px;
     color: black;
     width: 300px;
-    margin-bottom: -px;
     height: 300px;
     padding: none;
     background-color: rgb(245, 245, 124);
     border-radius: 2rem;
     border: 2px solid black;
-    margin-top: none;
     position: relative;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     text-align: center;
     transition: 0.4s ease-in-out
 }
 
 .title h2 {
     color: rgb(9, 9, 59);
-    padding-top: 20px;
 }
 
 .card img {
@@ -241,16 +238,15 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* 1. Header: Kita buat menumpuk supaya teks "MCGG" tidak nabrak logo */
     .body {
         overflow-x: hidden;
     }
     
     .header {
-        position: relative; /* Melepaskan 'fixed' agar tidak menutupi konten */
+        position: relative;
         flex-direction: column;
         padding: 15px;
-        background-color: rgba(9, 9, 59, 0.95); /* Biru tua solid agar navigasi jelas */
+        background-color: rgba(9, 9, 59, 0.95);
         gap: 10px;
     }
 
@@ -261,10 +257,9 @@ footer {
     .navbar a {
         margin: 0 10px;
         font-size: 14px;
-        color: white; /* Ganti putih agar kontras di HP */
+        color: white; 
     }
 
-    /* 2. Section Home: Menetralkan posisi foto & teks */
     .Home {
         height: auto; 
         padding: 40px 20px;
@@ -273,27 +268,27 @@ footer {
     }
 
     .Home h1 {
-        margin-top: 0; /* Menghapus -200px agar teks muncul di atas */
+        margin-top: 0; 
         font-size: 24px;
-        order: 1; /* Teks di paling atas */
+        order: 1; 
     }
 
     .Home-content {
-        margin: 20px 0; /* Menghapus margin 250px laptop */
-        order: 2; /* Kontainer logo di bawah teks */
+        margin: 20px 0;
+        order: 2; 
     }
 
     .photo-home img {
-        margin: 0 auto; /* Menghapus -550px agar logo ke tengah */
-        width: 180px; /* Ukuran pas untuk layar HP */
+        margin: 0 auto; 
+        width: 180px; 
         display: block;
         position: static;
     }
 
-     .imgbutton {
+    .MCGG {
         display: flex;
-        flex-direction: column; /* Biar judul di atas, box di bawah */
-        align-items: center;    /* Biar kontennya ke tengah semua */
+        flex-direction: column; 
+        align-items: center;   
         height: auto;
         padding: 40px 0;
     }
@@ -305,7 +300,7 @@ footer {
         padding: 10px 30px;
         width: fit-content;
         font-size: 15px;
-        margin-bottom: 20px; /* Jarak antara judul dan poster */
+        margin-bottom: 20px; 
     }
 
     .title h2 {
@@ -316,8 +311,8 @@ footer {
 
     .box {
         display: flex;
-        flex-direction: row; /* Poster tetap ke samping */
-        overflow-x: auto;    /* Bisa di-scroll */
+        flex-direction: row;
+        overflow-x: auto;   
         overflow-y: hidden;
         width: 100%;
         gap: 15px;
@@ -325,25 +320,23 @@ footer {
         -webkit-overflow-scrolling: touch;
     }
 
-    /* Ukuran kartu agar seragam dan tidak menciut */
     .card {
-        flex: 0 0 160px; /* Lebar poster tetap 280px (tidak boleh kurang) */
-        height: 220px;   /* Tinggi seragam */
+        flex: 0 0 160px;
+        height: 220px;  
     }
 
     .card img {
         width: 100%;
         height: 100%;
-        object-fit: contain; /* Poster utuh, tidak terpotong, tidak gepeng */
+        object-fit: contain; 
     }
 
-    /* Hilangkan scrollbar supaya rapi */
+
     .box::-webkit-scrollbar {
         display: none;
     }
-    /* 4. Footer: Menetralkan posisi ikon sosmed */
     .sosmed {
-        margin-top: 30px; /* Menghapus -90px laptop */
+        margin-top: 30px;
         gap: 20px;
     }
 
@@ -352,8 +345,12 @@ footer {
         margin-top: 0;
     }
 
+    .FooterContainer {
+        height: 50%;
+    }
+
     .photo-footer img {
-        margin-top: 20px; /* Menghapus -400px laptop */
+        margin: 0px;
         width: 120px;
     }
 }
