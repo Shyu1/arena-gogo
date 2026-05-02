@@ -240,17 +240,23 @@ footer {
     color: whitesmoke;
 }
 
-/* --- AREA KHUSUS HP (Hanya aktif di layar kecil) --- */
 @media (max-width: 768px) {
+    /* 1. Header & Navbar: Supaya tidak nabrak Logo */
     .header {
-        position: relative; /* Di HP jangan melayang biar nggak nutupin teks */
-        padding: 15px;
+        position: relative; /* Jangan fixed di HP agar tidak menutupi konten bawah */
         flex-direction: column;
-        background-color: rgba(9, 9, 59, 0.95); /* Biru tua solid agar menu kelihatan */
+        padding: 15px;
+        background-color: rgba(9, 9, 59, 0.95);
+        gap: 10px;
+    }
+
+    .logo {
+        padding: 5px;
+        font-size: 18px;
     }
 
     .navbar {
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     .navbar a {
@@ -258,50 +264,64 @@ footer {
         font-size: 14px;
     }
 
+    /* 2. Section Home: Menghilangkan tabrakan margin negatif */
     .Home {
-        height: auto; /* Biar nggak kepotong layar HP */
-        padding: 40px 20px;
+        height: auto; 
+        padding: 50px 20px;
         flex-direction: column;
+        display: flex;
     }
 
     .Home h1 {
-        margin-top: 0; /* Reset margin -200px punyamu */
-        font-size: 22px;
+        margin-top: 0; /* Menetralisir -200px punyamu khusus di HP */
+        font-size: 24px;
+        order: 1;
     }
 
     .Home-content {
-        margin: 20px 0; /* Reset margin 250px punyamu */
+        margin: 20px 0; /* Menetralisir margin samping 250px punyamu */
+        order: 2;
     }
 
     .photo-home img {
-        margin: 0 auto; /* Reset margin -550px punyamu agar ke tengah */
-        width: 150px;
+        margin: 10px auto; /* Menetralisir margin -550px punyamu */
+        width: 160px;
+        display: block;
+        position: static;
     }
 
+    /* 3. Section Turnamen (Kartu Kuning): Memberi jarak antar kartu */
     .imgbutton {
-        height: auto; /* Biar kartu turnamen bisa di-scroll ke bawah */
-        padding: 40px 20px;
+        height: auto;
+        padding: 40px 10px;
     }
 
     .title {
-        margin-top: 0; /* Reset margin -400px punyamu */
-        font-size: 20px;
+        margin-top: 0; /* Menetralisir -400px punyamu */
+        font-size: 22px;
         width: auto;
+        display: inline-block;
     }
 
     .box {
-        flex-direction: column; /* Kartu jadi tumpuk atas bawah */
+        flex-direction: column;
+        height: auto;
         max-height: none;
-        gap: 30px;
+        gap: 30px; /* Jarak antar kartu supaya tidak dempet seperti di foto */
+        margin-top: 30px;
     }
 
     .card {
-        width: 100%;
+        width: 90%;
+        max-width: 320px;
         height: auto;
+        margin: 0 auto;
     }
 
+    /* 4. Footer & Sosmed */
     .sosmed {
-        margin-top: 20px; /* Reset margin -90px punyamu */
+        margin-top: 30px; /* Menetralisir -90px punyamu */
+        gap: 20px;
     }
 
     .sosmed a {
@@ -310,8 +330,7 @@ footer {
     }
 
     .photo-footer img {
-        margin-top: 20px; /* Reset margin -400px punyamu */
-        width: 100px;
+        margin-top: 20px; /* Menetralisir -400px punyamu */
+        width: 120px;
     }
 }
-/* --- BATAS AKHIR MEDIA QUERY --- */
