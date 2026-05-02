@@ -242,6 +242,10 @@ footer {
 
 @media (max-width: 768px) {
     /* 1. Header: Kita buat menumpuk supaya teks "MCGG" tidak nabrak logo */
+    .body {
+        overflow-x: hidden;
+    }
+    
     .header {
         position: relative; /* Melepaskan 'fixed' agar tidak menutupi konten */
         flex-direction: column;
@@ -301,23 +305,36 @@ footer {
     }
 
     .box {
-        flex-direction: row-reverse;/* Kartu berurutan ke bawah agar poster besar & jelas */
-        height: auto;
-        max-width: 400px;
-        gap: 20px; /* Jarak antar kartu supaya tidak bertumpuk */
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 20px;
+        weidth: 100%;
+        max-height: 450px;
+        gap: 15px;
         margin-top: 20px;
+        -webkit-overflow-scrolling: touch;
     }
 
     .card {
-        width: 100%; /* Poster hampir selebar layar HP */
-        max-width: 250px;
-        height: auto; /* Tinggi mengikuti isi */
-        margin: 0 auto;
+        flex: 0 0 260px;
+        height: 380px; /* Tinggi mengikuti isi */
+        aspect-ratio:3/4;
+        border-radius:1rem;
+        margin: 0;
     }
 
     .card img {
+        width: 100%;
+        height: 100%;
         object-fit: contain; /* Memastikan poster turnamen tidak terpotong */
+    }
 
+    .box::-webkit-scrollbar {
+        height: 0px;
+        display: none;
     }
 
     /* 4. Footer: Menetralkan posisi ikon sosmed */
