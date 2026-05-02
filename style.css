@@ -290,29 +290,27 @@ footer {
         position: static;
     }
 
-    /* 3. Section Turnamen (Kartu Kuning): Memberi jarak agar tidak dempet */
-    .imgbutton {
+     .imgbutton {
+        display: flex;
+        flex-direction: column; /* Biar judul di atas, box di bawah */
+        align-items: center;    /* Biar kontennya ke tengah semua */
         height: auto;
-        padding: 40px 10px;
+        padding: 40px 0;
     }
 
     .title {
-        margin-top: 0; /* Menghapus -400px laptop */
-        font-size: 22px;
-        width: fit-content;
-        display: block;
-        margin: 0 auto 20px;
+        margin-top: 0;
+        margin-bottom: 20px; /* Jarak antara judul dan poster */
     }
 
-     .box {
+    .box {
         display: flex;
-        flex-direction: row; /* Berjajar ke samping */
-        flex-wrap: nowrap;   /* Jangan biarkan kartu turun ke bawah */
-        overflow-x: auto;    /* Bisa di-scroll samping */
-        gap: 20px;           /* Jarak antar poster */
-        padding: 20px;
+        flex-direction: row; /* Poster tetap ke samping */
+        overflow-x: auto;    /* Bisa di-scroll */
         width: 100%;
-        -webkit-overflow-scrolling: touch; /* Scroll halus di HP */
+        gap: 15px;
+        padding: 0 20px;
+        -webkit-overflow-scrolling: touch;
     }
 
     /* Ukuran kartu agar seragam dan tidak menciut */
